@@ -1,5 +1,3 @@
-const { func } = require("prop-types");
-
 
 function Queue() {
     collection = [];
@@ -89,7 +87,7 @@ function PriorityQueue() {
 var pq = new PriorityQueue(); 
 
 // pq.enqueue(['Beau Carnes', 2]); 
-// pq.enqueue(['Briana Swift', 2])
+pq.enqueue(['Briana Swift', 2])
 pq.enqueue(['Beau Carnes', 2]); 
 pq.enqueue(['Ewa Mitulska-Wójcik', 1]);
 pq.PrintCollection();

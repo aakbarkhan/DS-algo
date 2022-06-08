@@ -9,8 +9,11 @@
 // const n3 = {
 //     data:300
 // }
+
 // n1.next = n2;
+// n1.prev = nill;
 // n2.next = n3;
+// n2.prev = n1;
 // console.log(n1)
 
 // create a class for the node  whenever we want to create a node we will call this class.

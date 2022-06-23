@@ -16,7 +16,6 @@ let Node = function() {
     this.setEnd = function() {
         this.end = true;
     }
-
     this.isEnd = function() {
         return this.end;
     }
@@ -25,13 +24,16 @@ let Node = function() {
 let Trie = function() {
 
 	this.root = new Node();
+    // console.log(this.root);
 
 	this.add = function(input, node = this.root) {
 		if (input.length === 0) {
+
 			node.setEnd();
 			return;
 		} else if (!node.keys.has(input[0])) {
 			node.keys.set(input[0], new Node());
+            console.log(node, 'this is small node')
 			return this.add(input.substr(1), node.keys.get(input[0]));
 		} else {
 			return this.add(input.substr(1), node.keys.get(input[0]));
@@ -77,14 +79,14 @@ myTrie = new Trie()
 myTrie.add('ball'); 
 myTrie.add('bat'); 
 myTrie.add('doll'); 
-myTrie.add('dork'); 
-myTrie.add('do'); 
-myTrie.add('dorm')
-myTrie.add('send')
-myTrie.add('sense')
-myTrie.add('like')
-myTrie.add('bbbbb')
-myTrie.add('ba')
+// myTrie.add('dork'); 
+// myTrie.add('do'); 
+// myTrie.add('dorm')
+// myTrie.add('send')
+// myTrie.add('sense')
+// myTrie.add('like')
+// myTrie.add('bbbbb')
+// myTrie.add('ba')
 
 console.log(myTrie.isWord('doll'))
 console.log(myTrie.isWord('dor'))

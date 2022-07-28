@@ -62,12 +62,10 @@ const breathFirstTraversal = (root) => {
 
 breathFirstTraversal(a);
 
-
 // breadth first search(bfs(root, target)), that will have a root, and the target as 
 // an argument and seach in the binary tree
 // the functon should return the boolean whether or not the tree contain the target value.
-// 
-// 
+//
 
 const bfs = (root, target) => {
     const queue = [root]; // create an array an make avialbe the first root node to the queue.
@@ -86,8 +84,8 @@ const bfs = (root, target) => {
     return false;
 }
 
-console.log(bfs(a, 'z'))
-console.log(bfs(a, 'a'))
+console.log(bfs(a, 'z'));
+console.log(bfs(a, 'a'));
 
 const sumTree = (root) => {
     const queue = [root]; // create an array an make avialbe the first root node to the queue.
@@ -105,24 +103,21 @@ const sumTree = (root) => {
     return sum;
 }
 
-console.log(sumTree(a))
+console.log(sumTree(a));
+
+// const depthFirstPrint = (root) => {
+//     let stack = [root];
+//     while(stack.length > 0) {
+//         let current = stack.pop();
+//         console.log(current.val, 'd')
+//         if(current.right !=null) {
+//             stack.push(current.right)
+//         }
+//         if(current.left !=null) {
+//             stack.push(current.left)
+//         }
+//     }
+// }
 
 
-const depthFirsttraversal = (root) => {
-    let queue = [root];
-    while(queue.length> 0) {
-        let current = queue.pop();
-        console.log(current.val)
-        if(current.right !=null) {
-            queue.push(current.right)
-        }
-        if(current.left !=null) {
-            queue.push(current.left)
-        }
-    }
-}
-
-depthFirsttraversal(a)
-
-
-
+depthFirstPrint(a);
